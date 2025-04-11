@@ -1,3 +1,5 @@
+-- MADE BY RIP#6666
+-- send issues or suggestions to my discord: discord.gg/rips
 
 if not _G.Ignore then
     _G.Ignore = {} -- Add Instances to this table to ignore them (e.g. _G.Ignore = {workspace.Map, workspace.Map2})
@@ -192,7 +194,7 @@ local function CheckIfBad(Instance)
 end
 if _G.SendNotifications then
     StarterGui:SetCore("SendNotification", {
- 
+        Title = "discord.gg/rips",
         Text = "Loading FPS Booster...",
         Duration = math.huge,
         Button1 = "Okay"
@@ -213,7 +215,7 @@ coroutine.wrap(pcall)(function()
             sethiddenproperty(workspace:FindFirstChildOfClass("Terrain"), "Decoration", false)
         else
             StarterGui:SetCore("SendNotification", {
-         
+                Title = "discord.gg/rips",
                 Text = "Your exploit does not support sethiddenproperty, please use a different exploit.",
                 Duration = 5,
                 Button1 = "Okay"
@@ -222,7 +224,7 @@ coroutine.wrap(pcall)(function()
         end
         if _G.SendNotifications then
             StarterGui:SetCore("SendNotification", {
-         
+                Title = "discord.gg/rips",
                 Text = "Low Water Graphics Enabled",
                 Duration = 5,
                 Button1 = "Okay"
@@ -242,7 +244,7 @@ coroutine.wrap(pcall)(function()
             sethiddenproperty(Lighting, "Technology", 2)
         else
             StarterGui:SetCore("SendNotification", {
-         
+                Title = "discord.gg/rips",
                 Text = "Your exploit does not support sethiddenproperty, please use a different exploit.",
                 Duration = 5,
                 Button1 = "Okay"
@@ -251,7 +253,7 @@ coroutine.wrap(pcall)(function()
         end
         if _G.SendNotifications then
             StarterGui:SetCore("SendNotification", {
-         
+                Title = "discord.gg/rips",
                 Text = "No Shadows Enabled",
                 Duration = 5,
                 Button1 = "Okay"
@@ -268,7 +270,7 @@ coroutine.wrap(pcall)(function()
         settings().Rendering.MeshPartDetailLevel = Enum.MeshPartDetailLevel.Level04
         if _G.SendNotifications then
             StarterGui:SetCore("SendNotification", {
-         
+                Title = "discord.gg/rips",
                 Text = "Low Rendering Enabled",
                 Duration = 5,
                 Button1 = "Okay"
@@ -287,7 +289,7 @@ coroutine.wrap(pcall)(function()
         MaterialService.Use2022Materials = false
         if _G.SendNotifications then
             StarterGui:SetCore("SendNotification", {
-         
+                Title = "discord.gg/rips",
                 Text = "Reset Materials Enabled",
                 Duration = 5,
                 Button1 = "Okay"
@@ -305,6 +307,7 @@ coroutine.wrap(pcall)(function()
                 setfpscap(tonumber(_G.Settings["FPS Cap"] or (_G.Settings.Other and _G.Settings.Other["FPS Cap"])))
                 if _G.SendNotifications then
                     StarterGui:SetCore("SendNotification", {
+                        Title = "discord.gg/rips",
                         Text = "FPS Capped to " .. tostring(_G.Settings["FPS Cap"] or (_G.Settings.Other and _G.Settings.Other["FPS Cap"])),
                         Duration = 5,
                         Button1 = "Okay"
@@ -317,7 +320,8 @@ coroutine.wrap(pcall)(function()
                 setfpscap(1e6)
                 if _G.SendNotifications then
                     StarterGui:SetCore("SendNotification", {
-                       Text = "FPS Uncapped",
+                        Title = "discord.gg/rips",
+                        Text = "FPS Uncapped",
                         Duration = 5,
                         Button1 = "Okay"
                     })
@@ -328,7 +332,7 @@ coroutine.wrap(pcall)(function()
             end
         else
             StarterGui:SetCore("SendNotification", {
-                
+                Title = "discord.gg/rips",
                 Text = "FPS Cap Failed",
                 Duration = math.huge,
                 Button1 = "Okay"
@@ -346,7 +350,7 @@ local StartNumber = _G.WaitPerAmount or 500
 local WaitNumber = _G.WaitPerAmount or 500
 if _G.SendNotifications then
     StarterGui:SetCore("SendNotification", {
- 
+        Title = "discord.gg/rips",
         Text = "Checking " .. #Descendants .. " Instances...",
         Duration = 15,
         Button1 = "Okay"
@@ -366,7 +370,7 @@ for i, v in pairs(Descendants) do
     end
 end
 StarterGui:SetCore("SendNotification", {
-     
+    Title = "discord.gg/rips",
     Text = "FPS Booster Loaded!",
     Duration = math.huge,
     Button1 = "Okay"
@@ -376,4 +380,3 @@ warn("FPS Booster Loaded!")
 --[[game.DescendantAdded:Connect(function(value)
     CheckIfBad(value)
 end)]]
-
