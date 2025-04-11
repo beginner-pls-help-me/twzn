@@ -1,4 +1,4 @@
-
+--//⚙️ Cài đặt
 _G.Settings = {
     Players = {
         ["Ignore Me"] = true,
@@ -23,6 +23,8 @@ _G.Settings = {
     ["Low Quality Parts"] = true
 }
 
+
+--//🔧 Tối ưu thêm thủ công
 local decalsyeeted = true -- Tăng FPS mạnh nếu bật, nhưng game sẽ xấu
 
 local g = game
@@ -30,19 +32,19 @@ local w = g.Workspace
 local l = g.Lighting
 local t = w.Terrain
 
-
+--🌊 Tối ưu nước
 t.WaterWaveSize = 0
 t.WaterWaveSpeed = 0
 t.WaterReflectance = 0
 t.WaterTransparency = 0
 
-
+--💡 Tắt hiệu ứng ánh sáng
 l.GlobalShadows = false
 l.FogEnd = 9e9
 l.Brightness = 0
 settings().Rendering.QualityLevel = "Level01"
 
-
+--🧹 Dọn tài nguyên không cần thiết
 for i, v in pairs(g:GetDescendants()) do
     if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
         v.Material = Enum.Material.Plastic
@@ -63,13 +65,14 @@ for i, v in pairs(g:GetDescendants()) do
     end
 end
 
-
+--📸 Tắt hiệu ứng camera
 for _, e in pairs(l:GetChildren()) do
     if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect")
     or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
         e.Enabled = false
     end
 end
+
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/beginner-pls-help-me/twzn/main/fixlag.lua"))()
 
