@@ -366,7 +366,7 @@ for i, v in pairs(Descendants) do
     end
 end
 StarterGui:SetCore("SendNotification", {
-    Title = "discord.gg/rips",
+     
     Text = "FPS Booster Loaded!",
     Duration = math.huge,
     Button1 = "Okay"
